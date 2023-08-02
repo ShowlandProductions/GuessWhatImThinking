@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Guess the Number</h1>
+    </header>
+
+    <section class="game">
+        <div class="starry-night"></div>
+        <div class="confetti-container"></div>
+        <div class="game-info">
+            <h2>Try to guess the secret number!</h2>
+            <input type="number" id="userGuess" placeholder="Enter your guess" min="1" max="100" required>
+            <button id="submitBtn">Submit</button>
+            <button id="resetBtn">Restart</button>
+            <p id="message">Good luck!</p>
+        </div>
+
+        <div class="game-stats">
+            <h2>Statistics</h2>
+            <p>Attempts: <span id="attempts">0</span></p>
+            <p>Best Score: <span id="bestScore">-</span></p>
+        </div>
+
+        <div class="game-hint">
+            <p>Hint: <span id="gameHint">Make a guess!</span></p>
+        </div>
+
+        <div class="game-timer">
+            <p>Time left: <span id="timerDisplay">60</span> seconds</p>
+        </div>
+    </section>
+
+    <audio id="correctSound" src="correct.mp3"></audio>
+    <audio id="wrongSound" src="wrong.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
