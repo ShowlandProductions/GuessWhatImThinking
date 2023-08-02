@@ -11,37 +11,33 @@
 
 <body>
     <header>
-        <h1>Guess the Number</h1>
+        <h1>What Number Am I Thinking?</h1>
     </header>
 
     <section class="game">
-        <div class="starry-night"></div>
-        <div class="confetti-container"></div>
         <div class="game-info">
-            <h2>Try to guess the secret number!</h2>
-            <input type="number" id="userGuess" placeholder="Enter your guess" min="1" max="100" required>
-            <button id="submitBtn">Submit</button>
+            <h2>Between 1-100!</h2>
+            <div class="input-container">
+                <input type="number" id="userGuess" placeholder="???" min="1" max="100" required>
+                <button id="submitBtn">Submit</button>
+            </div>
             <button id="resetBtn">Restart</button>
-            <p id="message">Good luck!</p>
+            <button id="hintBtn">Hint</button>
         </div>
 
         <div class="game-stats">
             <h2>Statistics</h2>
             <p>Attempts: <span id="attempts">0</span></p>
             <p>Best Score: <span id="bestScore">-</span></p>
-        </div>
-
-        <div class="game-hint">
-            <p>Hint: <span id="gameHint">Make a guess!</span></p>
+            <p>Max Attempts: <span id="maxAttempts">10</span></p>
         </div>
 
         <div class="game-timer">
             <p>Time left: <span id="timerDisplay">60</span> seconds</p>
         </div>
-    </section>
 
-    <audio id="correctSound" src="correct.mp3"></audio>
-    <audio id="wrongSound" src="wrong.mp3"></audio>
+        <div class="game-result hidden" id="gameResult"></div>
+    </section>
 
     <script src="script.js"></script>
 </body>
